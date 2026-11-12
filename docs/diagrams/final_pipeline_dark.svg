@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 292" width="1000" height="292" role="img" aria-labelledby="t d" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"><title id="t">Final pipeline: proposal, filter, refiner</title><desc id="d">H-alpha image to 1 Proposal (DINOv3 ViT-S+/16 + 0.43 M head), 2 Filter (LightGBM on 32 features, keep score at least 0.5), 3 Refiner (DINOv3 ViT-B/16, 3 rounds, one filament per prompt), post-processing and pixel-disjoint instances. Each learned stage also yields an inspectable output: probability map, candidate crops (balanced or recall policy), instance masks with presence.</desc><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#9198a1"/></marker><marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#a371f7"/></marker></defs><path d="M140.8 21 V14 H319.725 M479.475 14 H658.4000000000001 V21" fill="none" stroke="#6e7681" stroke-width="1.2"/>
+<text x="399.6" y="18.5" font-size="12.5" fill="#9198a1" text-anchor="middle" font-weight="600">Three learned stages</text>
+<rect x="4" y="40" width="112" height="108" rx="10" fill="#161b22" stroke="#6e7681" stroke-width="1.6"/>
+<text x="60.0" y="81.0" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">H-alpha</text>
+<text x="60.0" y="103.0" font-size="12.5" fill="#9198a1" text-anchor="middle">full disk</text>
+<text x="60.0" y="120.0" font-size="12.5" fill="#9198a1" text-anchor="middle">2048 × 2048</text>
+<rect x="140.8" y="40" width="156" height="108" rx="10" fill="#0f2d1c" stroke="#3fb950" stroke-width="1.6"/>
+<text x="218.8" y="72.5" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">1 · Proposal</text>
+<text x="218.8" y="94.5" font-size="12.5" fill="#9198a1" text-anchor="middle">DINOv3 ViT-S+/16</text>
+<text x="218.8" y="111.5" font-size="12.5" fill="#9198a1" text-anchor="middle">+ 0.43 M head</text>
+<text x="218.8" y="128.5" font-size="12.5" fill="#56d364" text-anchor="middle" font-weight="600">high recall</text>
+<rect x="321.6" y="40" width="156" height="108" rx="10" fill="#3a1418" stroke="#f85149" stroke-width="1.6"/>
+<text x="399.6" y="72.5" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">2 · Filter</text>
+<text x="399.6" y="94.5" font-size="12.5" fill="#9198a1" text-anchor="middle">LightGBM</text>
+<text x="399.6" y="111.5" font-size="12.5" fill="#9198a1" text-anchor="middle">32 features</text>
+<text x="399.6" y="128.5" font-size="12.5" fill="#ff7b72" text-anchor="middle" font-weight="600">keep if score ≥ 0.5</text>
+<rect x="502.40000000000003" y="40" width="156" height="108" rx="10" fill="#0f2d1c" stroke="#3fb950" stroke-width="1.6"/>
+<text x="580.4" y="72.5" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">3 · Refiner</text>
+<text x="580.4" y="94.5" font-size="12.5" fill="#9198a1" text-anchor="middle">DINOv3 ViT-B/16</text>
+<text x="580.4" y="111.5" font-size="12.5" fill="#9198a1" text-anchor="middle">3 recurrent rounds</text>
+<text x="580.4" y="128.5" font-size="12.5" fill="#56d364" text-anchor="middle" font-weight="600">1 filament / prompt</text>
+<rect x="683.2" y="40" width="150" height="108" rx="10" fill="#3a2210" stroke="#db6d28" stroke-width="1.6"/>
+<text x="758.2" y="81.0" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">Post-process</text>
+<text x="758.2" y="103.0" font-size="12.5" fill="#9198a1" text-anchor="middle">native resampling</text>
+<text x="758.2" y="120.0" font-size="12.5" fill="#9198a1" text-anchor="middle">de-duplication</text>
+<rect x="858.0" y="40" width="138" height="108" rx="10" fill="#0c2d4f" stroke="#388bfd" stroke-width="1.6"/>
+<text x="927.0" y="81.0" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">Instances</text>
+<text x="927.0" y="103.0" font-size="12.5" fill="#9198a1" text-anchor="middle">pixel-disjoint</text>
+<text x="927.0" y="120.0" font-size="12.5" fill="#9198a1" text-anchor="middle">submission.csv</text>
+<line x1="118" y1="94.0" x2="137.8" y2="94.0" stroke="#9198a1" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="298.8" y1="94.0" x2="318.6" y2="94.0" stroke="#9198a1" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="479.6" y1="94.0" x2="499.40000000000003" y2="94.0" stroke="#9198a1" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="660.4000000000001" y1="94.0" x2="680.2" y2="94.0" stroke="#9198a1" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="835.2" y1="94.0" x2="855.0" y2="94.0" stroke="#9198a1" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="140.8" y="206" width="156" height="70" rx="10" fill="#2b1a47" stroke="#a371f7" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="218.8" y="236.5" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">Probability map</text>
+<text x="218.8" y="258.5" font-size="12.5" fill="#9198a1" text-anchor="middle">components, p ≥ 0.05</text>
+<line x1="218.8" y1="151" x2="218.8" y2="202" stroke="#a371f7" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#r)"/>
+<rect x="321.6" y="206" width="156" height="70" rx="10" fill="#2b1a47" stroke="#a371f7" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="399.6" y="236.5" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">Candidate crops</text>
+<text x="399.6" y="258.5" font-size="12.5" fill="#9198a1" text-anchor="middle">balanced or recall</text>
+<line x1="399.6" y1="151" x2="399.6" y2="202" stroke="#a371f7" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#r)"/>
+<rect x="502.40000000000003" y="206" width="156" height="70" rx="10" fill="#2b1a47" stroke="#a371f7" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="580.4" y="236.5" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">Instance masks</text>
+<text x="580.4" y="258.5" font-size="12.5" fill="#9198a1" text-anchor="middle">mask + presence</text>
+<line x1="580.4000000000001" y1="151" x2="580.4000000000001" y2="202" stroke="#a371f7" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#r)"/>
+<text x="112.0" y="237.0" font-size="12.5" fill="#d2a8ff" text-anchor="end" font-weight="600">Inspectable</text>
+<text x="112.0" y="254.0" font-size="12.5" fill="#d2a8ff" text-anchor="end" font-weight="600">outputs</text>
+<text x="839.6" y="228.0" font-size="12.5" fill="#9198a1" text-anchor="middle">Test time: every stage averages</text>
+<text x="839.6" y="245.0" font-size="12.5" fill="#9198a1" text-anchor="middle">its five fold models; the refiner</text>
+<text x="839.6" y="262.0" font-size="12.5" fill="#9198a1" text-anchor="middle">also averages 8 D4 transforms.</text></svg>

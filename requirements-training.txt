@@ -1,0 +1,4 @@
+-r requirements.txt
+# Original training notebooks did not pin scikit-image.
+# Use 0.25.2 for the documented reconstruction; the original exact version is unrecorded.
+scikit-image==0.25.2

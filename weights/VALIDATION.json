@@ -1,0 +1,110 @@
+{
+  "proposal": [
+    {
+      "fold": 0,
+      "strict_load": true,
+      "finite": true,
+      "head_parameters": 426993
+    },
+    {
+      "fold": 1,
+      "strict_load": true,
+      "finite": true,
+      "head_parameters": 426993
+    },
+    {
+      "fold": 2,
+      "strict_load": true,
+      "finite": true,
+      "head_parameters": 426993
+    },
+    {
+      "fold": 3,
+      "strict_load": true,
+      "finite": true,
+      "head_parameters": 426993
+    },
+    {
+      "fold": 4,
+      "strict_load": true,
+      "finite": true,
+      "head_parameters": 426993
+    }
+  ],
+  "refiner": [
+    {
+      "fold": 0,
+      "strict_load": true,
+      "finite": true,
+      "decoder_parameters": 6466242,
+      "tuned_parameters": 28354560
+    },
+    {
+      "fold": 1,
+      "strict_load": true,
+      "finite": true,
+      "decoder_parameters": 6466242,
+      "tuned_parameters": 28354560
+    },
+    {
+      "fold": 2,
+      "strict_load": true,
+      "finite": true,
+      "decoder_parameters": 6466242,
+      "tuned_parameters": 28354560
+    },
+    {
+      "fold": 3,
+      "strict_load": true,
+      "finite": true,
+      "decoder_parameters": 6466242,
+      "tuned_parameters": 28354560
+    },
+    {
+      "fold": 4,
+      "strict_load": true,
+      "finite": true,
+      "decoder_parameters": 6466242,
+      "tuned_parameters": 28354560
+    }
+  ],
+  "ml": [
+    {
+      "fold": 0,
+      "load": true,
+      "features": 32,
+      "trees": 250,
+      "finite_prediction": true
+    },
+    {
+      "fold": 1,
+      "load": true,
+      "features": 32,
+      "trees": 250,
+      "finite_prediction": true
+    },
+    {
+      "fold": 2,
+      "load": true,
+      "features": 32,
+      "trees": 250,
+      "finite_prediction": true
+    },
+    {
+      "fold": 3,
+      "load": true,
+      "features": 32,
+      "trees": 250,
+      "finite_prediction": true
+    },
+    {
+      "fold": 4,
+      "load": true,
+      "features": 32,
+      "trees": 250,
+      "finite_prediction": true
+    }
+  ],
+  "passed": true,
+  "scope": "CPU structural and finite checks, not a new full inference or training rerun"
+}

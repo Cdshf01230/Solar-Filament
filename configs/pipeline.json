@@ -1,0 +1,97 @@
+{
+  "system": "solar_filament_pipeline",
+  "primary": true,
+  "seed": 42,
+  "folds": "splits/fold_assignment.json",
+  "proposal": {
+    "train": "one owner fold",
+    "oof": "mean four heads excluding owner",
+    "test": "mean five heads",
+    "epochs": 4,
+    "checkpoint": "last_head.pt",
+    "head_parameters": 426993,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "warmup_updates": 20,
+    "global_batch": 8,
+    "initial_microbatch": 2,
+    "backbone_precision": "float32",
+    "head_precision": "float16",
+    "threshold": 0.05,
+    "min_component_area": 8
+  },
+  "ml": {
+    "train": "one owner fold",
+    "oof": "mean four classifiers excluding owner",
+    "test": "mean five classifiers",
+    "features": 32,
+    "n_estimators": 250,
+    "num_leaves": 15,
+    "max_depth": 6,
+    "learning_rate": 0.05,
+    "min_child_samples": 30,
+    "reg_lambda": 3,
+    "threshold": 0.5,
+    "default_policy": "balance",
+    "policies": {
+      "balance": {
+        "positive_weight_multiplier": 1,
+        "weights": "weights/ml/balance_fold{k}.txt",
+        "usage": "default end-to-end pipeline"
+      },
+      "recall": {
+        "positive_weight_multiplier": 48,
+        "weights": "weights/ml/recall_fold{k}.txt",
+        "usage": "candidate export; refiner PQ not evaluated"
+      }
+    }
+  },
+  "refiner": {
+    "train": "four folds excluding holdout",
+    "epochs": 30,
+    "checkpoint": "last.pt",
+    "decoder_parameters": 6466242,
+    "tuned_backbone_parameters": 28354560,
+    "tuned_blocks": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "decoder_lr": 0.0003,
+    "top_block_lr": 2e-05,
+    "layer_decay": 0.65,
+    "drop_path": 0.1,
+    "weight_decay": 0.01,
+    "global_batch": 8,
+    "microbatch": 1,
+    "warmup_updates": 200,
+    "lr_floor": 0.03333333333333333,
+    "rounds": 3,
+    "d4": true,
+    "photometric": true,
+    "ema": 0,
+    "lp_epochs": 0
+  },
+  "inference": {
+    "tta": 8,
+    "rounds": 3,
+    "native_probability_resize": "linear",
+    "threshold": 0.5,
+    "presence_threshold": 0.5,
+    "min_area": 128,
+    "pad_each_side": 128,
+    "fold_order": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "probability_quantization": "uint8 per refiner fold before ensemble"
+  },
+  "verification": {
+    "historical_l4_csv": "byte-identical on 2026-11-09",
+    "fresh_training_rerun": "not performed"
+  }
+}

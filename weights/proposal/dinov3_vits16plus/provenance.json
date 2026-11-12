@@ -1,0 +1,5 @@
+{
+  "model": "facebook/dinov3-vits16plus-pretrain-lvd1689m",
+  "source": "https://huggingface.co/facebook/dinov3-vits16plus-pretrain-lvd1689m",
+  "usage": "private frozen-backbone proposal experiment authorized 2026-11-01"
+}

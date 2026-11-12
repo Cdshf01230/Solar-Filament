@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+work/
+work_*/
+submission.csv
+*.log
+.ipynb_checkpoints/
+!reference/submission.csv

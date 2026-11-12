@@ -1,0 +1,102 @@
+{
+  "policy": "recall",
+  "positive_weight_multiplier": 48,
+  "threshold": 0.5,
+  "training_environment": {
+    "python": "3.13.12",
+    "lightgbm": "4.6.0",
+    "sklearn": "1.6.1"
+  },
+  "sources": 707,
+  "records": 1154,
+  "gt": 8199,
+  "components": 16721,
+  "result": {
+    "factor": 48,
+    "kept": 9411,
+    "record_component": {
+      "tp": 8024,
+      "fp": 7413,
+      "fn": 372,
+      "precision": 0.5197901146595841,
+      "recall": 0.9556931872320152
+    },
+    "by_owner_fold": {
+      "0": {
+        "tp": 1589,
+        "fp": 1560,
+        "fn": 68,
+        "precision": 0.5046046363925055,
+        "recall": 0.9589619794809897
+      },
+      "1": {
+        "tp": 1790,
+        "fp": 1616,
+        "fn": 84,
+        "precision": 0.5255431591309454,
+        "recall": 0.9551760939167556
+      },
+      "2": {
+        "tp": 1539,
+        "fp": 1341,
+        "fn": 82,
+        "precision": 0.534375,
+        "recall": 0.9494139420111043
+      },
+      "3": {
+        "tp": 1652,
+        "fp": 1501,
+        "fn": 54,
+        "precision": 0.5239454487789407,
+        "recall": 0.9683470105509965
+      },
+      "4": {
+        "tp": 1454,
+        "fp": 1395,
+        "fn": 84,
+        "precision": 0.5103545103545104,
+        "recall": 0.9453836150845254
+      }
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "positive_weight": 103.79639055992595,
+        "seconds": 1.0516326427459717,
+        "reload_exact": true
+      },
+      {
+        "fold": 1,
+        "positive_weight": 106.71658738683443,
+        "seconds": 0.8937029838562012,
+        "reload_exact": true
+      },
+      {
+        "fold": 2,
+        "positive_weight": 101.01331622011872,
+        "seconds": 0.910189151763916,
+        "reload_exact": true
+      },
+      {
+        "fold": 3,
+        "positive_weight": 101.03009224255256,
+        "seconds": 1.0030083656311035,
+        "reload_exact": true
+      },
+      {
+        "fold": 4,
+        "positive_weight": 104.30026809651473,
+        "seconds": 0.9175784587860107,
+        "reload_exact": true
+      }
+    ]
+  },
+  "coverage": {
+    "gt": 8199,
+    "touch": 8155,
+    "covered90": 8023,
+    "covered100": 7949
+  },
+  "selection": "Development OOF selection across multipliers1/2/4/8/16/32 then added48/64; not independent test",
+  "refiner_pq_evaluated": false
+}

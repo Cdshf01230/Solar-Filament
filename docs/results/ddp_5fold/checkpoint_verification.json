@@ -1,0 +1,37 @@
+[
+  {
+    "fold": 0,
+    "epoch": 20,
+    "update": 31300,
+    "strict_load": true,
+    "finite": true
+  },
+  {
+    "fold": 1,
+    "epoch": 20,
+    "update": 30620,
+    "strict_load": true,
+    "finite": true
+  },
+  {
+    "fold": 2,
+    "epoch": 20,
+    "update": 31560,
+    "strict_load": true,
+    "finite": true
+  },
+  {
+    "fold": 3,
+    "epoch": 20,
+    "update": 31180,
+    "strict_load": true,
+    "finite": true
+  },
+  {
+    "fold": 4,
+    "epoch": 20,
+    "update": 31600,
+    "strict_load": true,
+    "finite": true
+  }
+]

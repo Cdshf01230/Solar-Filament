@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "filament-pq"
+version = "1.0.0"
+description = "Solar filament instance segmentation (proposal, filter, prompted recurrent refiner) for MAGFiLO / GONG H-alpha"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT (code); DINOv3 License (backbone weights)" }
+# Exact environment of the submitted run: requirements.txt. Install it first, then `pip install -e .`.
+
+[tool.setuptools]
+packages = ["filament_pq", "filament_pq.refiner"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+# ddp_5fold/runtime/ is the training code of the five DDP models in its original style (see its README); it is neither
+# reformatted nor linted.
+extend-exclude = ["notebooks/pipeline.ipynb", "training/baselines/ddp_5fold/runtime"]
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "preserve"
+
+[tool.ruff.lint]
+select = ["E9", "F"]
+
+
+[tool.ruff.lint.per-file-ignores]
+# Original training code, kept as it was run. Deliberate patterns: re-imports that override a shared definition
+# (F811), star imports that select the backbone variant (F403), a name defined in the first loop phase and used in
+# the second (F821, threshold_sweep), and an unpacked value that is not needed (F841).
+"training/**" = ["F811", "F403", "F821", "F841"]

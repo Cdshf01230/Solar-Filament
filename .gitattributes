@@ -1,0 +1,7 @@
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.safetensors filter=lfs diff=lfs merge=lfs -text
+*.joblib filter=lfs diff=lfs merge=lfs -text
+weights/ml/*.txt filter=lfs diff=lfs merge=lfs -text
+# Submission-format CSVs are written with CRLF line ends (Python csv module) and compared byte for byte with fresh
+# output (tests/test_regression.py), so git must store them unchanged on every platform.
+*.csv -text

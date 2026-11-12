@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 268" width="1000" height="268" role="img" aria-labelledby="t d" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"><title id="t">Baseline: semantic head and connected components</title><desc id="d">H-alpha image, frozen ConvNeXt-B semantic head on 768 px tiles, threshold chosen on quick74, 8-connected components of at least 8 px, one instance per component. Failure modes: a faint section splits one filament; a bridge of false pixels merges two.</desc><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#9198a1"/></marker></defs><path d="M173 21 V14 H301.125 M445.875 14 H574 V21" fill="none" stroke="#6e7681" stroke-width="1.2"/>
+<text x="373.5" y="18.5" font-size="12.5" fill="#9198a1" text-anchor="middle" font-weight="600">Pixel classification</text>
+<path d="M625 21 V14 H738.25 M882.75 14 H996 V21" fill="none" stroke="#6e7681" stroke-width="1.2"/>
+<text x="810.5" y="18.5" font-size="12.5" fill="#9198a1" text-anchor="middle" font-weight="600">Pixels to instances</text>
+<rect x="4" y="40" width="118" height="104" rx="10" fill="#161b22" stroke="#6e7681" stroke-width="1.6"/>
+<text x="63.0" y="79.0" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">H-alpha</text>
+<text x="63.0" y="101.0" font-size="12.5" fill="#9198a1" text-anchor="middle">full disk</text>
+<text x="63.0" y="118.0" font-size="12.5" fill="#9198a1" text-anchor="middle">2048 × 2048</text>
+<rect x="173" y="40" width="178" height="104" rx="10" fill="#0f2d1c" stroke="#3fb950" stroke-width="1.6"/>
+<text x="262.0" y="62.0" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">Semantic head</text>
+<text x="262.0" y="84.0" font-size="12.5" fill="#9198a1" text-anchor="middle">frozen ConvNeXt-B</text>
+<text x="262.0" y="101.0" font-size="12.5" fill="#9198a1" text-anchor="middle">FPN · U-Net · DDP-mini</text>
+<text x="262.0" y="118.0" font-size="12.5" fill="#9198a1" text-anchor="middle">9 tiles, Hann blend</text>
+<text x="262.0" y="135.0" font-size="12.5" fill="#56d364" text-anchor="middle" font-weight="600">1.6–2.1 M trainable</text>
+<rect x="402" y="40" width="172" height="104" rx="10" fill="#3a1418" stroke="#f85149" stroke-width="1.6"/>
+<text x="488.0" y="70.5" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">Threshold</text>
+<text x="488.0" y="92.5" font-size="12.5" fill="#9198a1" text-anchor="middle">probability map</text>
+<text x="488.0" y="109.5" font-size="12.5" fill="#9198a1" text-anchor="middle">to binary mask</text>
+<text x="488.0" y="126.5" font-size="12.5" fill="#ff7b72" text-anchor="middle" font-weight="600">chosen on quick74</text>
+<rect x="625" y="40" width="160" height="104" rx="10" fill="#3a2210" stroke="#db6d28" stroke-width="1.6"/>
+<text x="705.0" y="79.0" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">Components</text>
+<text x="705.0" y="101.0" font-size="12.5" fill="#9198a1" text-anchor="middle">8-connected</text>
+<text x="705.0" y="118.0" font-size="12.5" fill="#9198a1" text-anchor="middle">area ≥ 8 px</text>
+<rect x="836" y="40" width="160" height="104" rx="10" fill="#0c2d4f" stroke="#388bfd" stroke-width="1.6"/>
+<text x="916.0" y="87.5" font-size="15" fill="#e6edf3" text-anchor="middle" font-weight="600">Instances</text>
+<text x="916.0" y="109.5" font-size="12.5" fill="#9198a1" text-anchor="middle">one per component</text>
+<line x1="124" y1="92.0" x2="170" y2="92.0" stroke="#9198a1" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="353" y1="92.0" x2="399" y2="92.0" stroke="#9198a1" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="576" y1="92.0" x2="622" y2="92.0" stroke="#9198a1" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="787" y1="92.0" x2="833" y2="92.0" stroke="#9198a1" stroke-width="1.8" marker-end="url(#a)"/>
+<path d="M705.0 146 V181" stroke="#f85149" stroke-width="1.4" stroke-dasharray="3 3"/>
+<rect x="402" y="182" width="594" height="70" rx="10" fill="#2a1215" stroke="#f85149" stroke-width="1.2"/>
+<text x="418.0" y="204.0" font-size="13" fill="#ff7b72" text-anchor="start" font-weight="600">Where it fails</text>
+<text x="418.0" y="223.0" font-size="12.5" fill="#9198a1" text-anchor="start">A faint, thin section splits one filament into pieces.</text>
+<text x="418.0" y="240.0" font-size="12.5" fill="#9198a1" text-anchor="start">A bridge of false pixels merges two filaments into one.</text></svg>

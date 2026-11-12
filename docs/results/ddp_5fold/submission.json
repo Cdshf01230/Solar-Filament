@@ -1,0 +1,36 @@
+{
+  "mode": "five-model probability ensemble",
+  "images": 180,
+  "rows": 1725,
+  "threshold": 0.5,
+  "min_area": 128,
+  "tta": 1,
+  "checkpoints": {
+    "0": {
+      "path": "/content/ddp20/checkpoints/f0/epoch_20.pt",
+      "epoch": 20,
+      "update": 31300
+    },
+    "1": {
+      "path": "/content/ddp20/checkpoints/f1/epoch_20.pt",
+      "epoch": 20,
+      "update": 30620
+    },
+    "2": {
+      "path": "/content/ddp20/checkpoints/f2/epoch_20.pt",
+      "epoch": 20,
+      "update": 31560
+    },
+    "3": {
+      "path": "/content/ddp20/checkpoints/f3/epoch_20.pt",
+      "epoch": 20,
+      "update": 31180
+    },
+    "4": {
+      "path": "/content/ddp20/checkpoints/f4/epoch_20.pt",
+      "epoch": 20,
+      "update": 31600
+    }
+  },
+  "requested_epoch": 20
+}

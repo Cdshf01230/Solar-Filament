@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "sources": 707,
+  "policies": {
+    "balance": {
+      "models": 5,
+      "trees_each": 250,
+      "features": 32,
+      "components_checked": 16721,
+      "text_joblib_scores_exact": true,
+      "mean_oof_kept": 5493,
+      "positive_weight_multiplier": 1
+    },
+    "recall": {
+      "models": 5,
+      "trees_each": 250,
+      "features": 32,
+      "components_checked": 16721,
+      "text_joblib_scores_exact": true,
+      "mean_oof_kept": 9411,
+      "positive_weight_multiplier": 48,
+      "training_saved_scores_exact": true
+    }
+  },
+  "default_balance_unchanged": true,
+  "lightgbm": "4.7.0",
+  "scope": "CPU reload and score equality on all original OOF component features; no new neural inference",
+  "recall_training_environment": {
+    "python": "3.13.12",
+    "lightgbm": "4.6.0",
+    "sklearn": "1.6.1"
+  }
+}

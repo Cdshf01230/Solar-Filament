@@ -1,0 +1,47 @@
+{
+ "refiner_fold0": {
+  "epoch": 30,
+  "update": 16410,
+  "decoder_tensors": 143,
+  "tuned_tensors": 68,
+  "frozen_tensors_verified_identical": 145,
+  "decoder_params": 6466242,
+  "tuned_params": 28354560
+ },
+ "refiner_fold1": {
+  "epoch": 30,
+  "update": 16230,
+  "decoder_tensors": 143,
+  "tuned_tensors": 68,
+  "frozen_tensors_verified_identical": 145,
+  "decoder_params": 6466242,
+  "tuned_params": 28354560
+ },
+ "refiner_fold2": {
+  "epoch": 30,
+  "update": 16650,
+  "decoder_tensors": 143,
+  "tuned_tensors": 68,
+  "frozen_tensors_verified_identical": 145,
+  "decoder_params": 6466242,
+  "tuned_params": 28354560
+ },
+ "refiner_fold3": {
+  "epoch": 30,
+  "update": 16410,
+  "decoder_tensors": 143,
+  "tuned_tensors": 68,
+  "frozen_tensors_verified_identical": 145,
+  "decoder_params": 6466242,
+  "tuned_params": 28354560
+ },
+ "refiner_fold4": {
+  "epoch": 30,
+  "update": 16740,
+  "decoder_tensors": 143,
+  "tuned_tensors": 68,
+  "frozen_tensors_verified_identical": 145,
+  "decoder_params": 6466242,
+  "tuned_params": 28354560
+ }
+}

@@ -1,0 +1,289 @@
+{
+  "image": "20220710085152Th.jpeg",
+  "record": "010203-20220710085152Th",
+  "gt": 11,
+  "classifier_policy": "balance",
+  "owner_fold": 2,
+  "proposal_classifier_folds": [
+    0,
+    1,
+    3,
+    4
+  ],
+  "refiner_fold": 2,
+  "refiner_epoch": 30,
+  "tta": 8,
+  "probability_storage": "uint8 round(255*p), original OOF dump",
+  "postprocessing": {
+    "resize": "linear probability to native, then > .5",
+    "presence_threshold": 0.5,
+    "min_area": 128,
+    "nms_iou": 0.5,
+    "final_area": 128
+  },
+  "input_prompts": 13,
+  "presence_rejected": [
+    "20220710085152Th_00022"
+  ],
+  "candidates": 12,
+  "final_instances": 12,
+  "full_image_metrics": {
+    "legacy": {
+      "pq": 0.35088472262672754,
+      "sq": 0.6725290517012278,
+      "rq": 0.5217391304347826,
+      "tp": 6.0,
+      "fp": 6.0,
+      "fn": 5.0
+    },
+    "strict_one_to_one": {
+      "pq": 0.35088472262672754,
+      "sq": 0.6725290517012278,
+      "rq": 0.5217391304347826,
+      "tp": 6.0,
+      "fp": 6.0,
+      "fn": 5.0
+    }
+  },
+  "zoom_xyxy": [
+    675,
+    1087,
+    1395,
+    1807
+  ],
+  "prompt": {
+    "crop_id": "20220710085152Th_00013",
+    "box_xyxy": [
+      508,
+      625,
+      949,
+      996
+    ],
+    "target_gt_index": 5,
+    "presence_round1": 0.9630404114723206,
+    "presence_round3": 0.9686360955238342,
+    "display_xyxy": [
+      508,
+      590,
+      949,
+      1031
+    ],
+    "metrics": {
+      "Input anchor": {
+        "target_iou": 0.33586232420429313,
+        "pixels": 5275
+      },
+      "After round 1": {
+        "target_iou": 0.7268135904499541,
+        "pixels": 1817
+      },
+      "After round 3": {
+        "target_iou": 0.7320054323223177,
+        "pixels": 1882
+      }
+    },
+    "panel_order": [
+      "Input anchor",
+      "Ground truth",
+      "After round 1",
+      "After round 3"
+    ],
+    "views": [
+      "GT outlines on predictions",
+      "separate GT panel only"
+    ],
+    "crop_border_drawn": false,
+    "selection": "component 13, illustrative example; not an average"
+  },
+  "crops": [
+    {
+      "crop_id": "20220710085152Th_00003",
+      "box_xyxy": [
+        892,
+        168,
+        1333,
+        488
+      ],
+      "ml_score": 0.7210670709609985,
+      "presence": [
+        0.5661827325820923,
+        0.6178887486457825
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00008",
+      "box_xyxy": [
+        737,
+        335,
+        1203,
+        689
+      ],
+      "ml_score": 0.9928440451622009,
+      "presence": [
+        0.9924048185348511,
+        0.9943628907203674
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00009",
+      "box_xyxy": [
+        172,
+        357,
+        545,
+        835
+      ],
+      "ml_score": 0.8790719509124756,
+      "presence": [
+        0.8972955942153931,
+        0.9118276834487915
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00010",
+      "box_xyxy": [
+        992,
+        405,
+        1365,
+        718
+      ],
+      "ml_score": 0.9417693018913269,
+      "presence": [
+        0.9064415693283081,
+        0.9183081388473511
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00013",
+      "box_xyxy": [
+        508,
+        625,
+        949,
+        996
+      ],
+      "ml_score": 0.956855058670044,
+      "presence": [
+        0.9630404114723206,
+        0.9686360955238342
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00021",
+      "box_xyxy": [
+        170,
+        802,
+        605,
+        1325
+      ],
+      "ml_score": 0.9968871474266052,
+      "presence": [
+        0.9970597624778748,
+        0.9977091550827026
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00022",
+      "box_xyxy": [
+        908,
+        1005,
+        1297,
+        1339
+      ],
+      "ml_score": 0.5644639730453491,
+      "presence": [
+        0.20923501253128052,
+        0.32343173027038574
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00025",
+      "box_xyxy": [
+        481,
+        1140,
+        835,
+        1473
+      ],
+      "ml_score": 0.5285427570343018,
+      "presence": [
+        0.4992430508136749,
+        0.551598072052002
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00026",
+      "box_xyxy": [
+        158,
+        1149,
+        497,
+        1568
+      ],
+      "ml_score": 0.6554804444313049,
+      "presence": [
+        0.4425851106643677,
+        0.5122601389884949
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00027",
+      "box_xyxy": [
+        603,
+        1180,
+        1356,
+        1811
+      ],
+      "ml_score": 0.9936506152153015,
+      "presence": [
+        0.9936671853065491,
+        0.9950141310691833
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00028",
+      "box_xyxy": [
+        415,
+        1183,
+        1027,
+        1759
+      ],
+      "ml_score": 0.9976457357406616,
+      "presence": [
+        0.9990769624710083,
+        0.9991183876991272
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00029",
+      "box_xyxy": [
+        1370,
+        1193,
+        1762,
+        1505
+      ],
+      "ml_score": 0.9888472557067871,
+      "presence": [
+        0.993028461933136,
+        0.9935053586959839
+      ]
+    },
+    {
+      "crop_id": "20220710085152Th_00030",
+      "box_xyxy": [
+        1421,
+        1260,
+        1738,
+        1558
+      ],
+      "ml_score": 0.9207341074943542,
+      "presence": [
+        0.8147976994514465,
+        0.8462283611297607
+      ]
+    }
+  ],
+  "checks": {
+    "stage2_ids_scores_boxes_anchors_exact": true,
+    "native_input_images_exact": true,
+    "pixel_disjoint_final_masks": true,
+    "original_oof_full_image_counts_exact": true
+  },
+  "note": "Balanced OOF example only. Full-image panel includes released post-processing; prompt panels show raw thresholded masks. No recall-policy refiner result is implied."
+}
